@@ -9,8 +9,7 @@ namespace laba_4._1n
 {
     class Triangle : Base
     {
-        private float X { init; get; }
-        private float Y { init; get; }
+        
         private float radius;
         
         private PointF[] pts = new PointF[3];
@@ -18,8 +17,8 @@ namespace laba_4._1n
        
         public Triangle(int x, int y)
         {
-            this.X = x;
-            this.Y = y;
+            this.x = x;
+            this.y = y;
             this.radius = 30;
             pts[0] = new PointF(x, y - radius);
             pts[1] = new PointF(x - radius * MathF.Sqrt(3) / 2, y + radius / 2);
@@ -41,6 +40,38 @@ namespace laba_4._1n
             float m3 = (pts[2].X - x) * (pts[0].Y - pts[2].Y) - (pts[2].Y - y) * (pts[0].X - pts[2].X);
             return (m1 >= 0 && m2 >= 0 && m3 >= 0) || (m1 <= 0 && m2 <= 0 && m3 <= 0);
 
+        }
+        public override void move(int x, int y, int width, int height)
+        {
+            if (pts[1].X + x > 3 && pts[2].X + x < width - 15 && pts[0].Y + y > 3 && pts[1].Y + y < height - 25) 
+            { 
+            if(pts[1].X + x > 180 || pts[0].Y + y > 180) { 
+
+            pts[0].X += x;
+            pts[0].Y += y;
+            pts[1].X += x;
+            pts[1].Y += y;
+            pts[2].X += x;
+            pts[2].Y += y;
+            }
+            
+            }
+        }
+        public override void changeSize(int num)
+        {
+            if(num == 1)
+            {
+                pts[0].Y -= 10;
+                pts[1].X -= 10;
+                pts[2].X += 10;
+            }
+            else if(num == -1) 
+            {
+                pts[0].Y += 10;
+                pts[1].X += 10;
+                pts[2].X -= 10;
+
+            }
         }
     }
 }

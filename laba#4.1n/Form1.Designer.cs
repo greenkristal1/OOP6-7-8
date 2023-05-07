@@ -31,7 +31,6 @@
             mark_more = new CheckBox();
             ctrl_enabled = new CheckBox();
             group_figures = new GroupBox();
-            rad_section = new RadioButton();
             rad_square = new RadioButton();
             rad_triangle = new RadioButton();
             rad_circle = new RadioButton();
@@ -41,7 +40,7 @@
             // mark_more
             // 
             mark_more.AutoSize = true;
-            mark_more.Location = new Point(1111, 51);
+            mark_more.Location = new Point(5, 131);
             mark_more.Name = "mark_more";
             mark_more.Size = new Size(101, 24);
             mark_more.TabIndex = 0;
@@ -51,7 +50,7 @@
             // ctrl_enabled
             // 
             ctrl_enabled.AutoSize = true;
-            ctrl_enabled.Location = new Point(1111, 111);
+            ctrl_enabled.Location = new Point(5, 152);
             ctrl_enabled.Name = "ctrl_enabled";
             ctrl_enabled.Size = new Size(138, 24);
             ctrl_enabled.TabIndex = 1;
@@ -60,31 +59,20 @@
             // 
             // group_figures
             // 
-            group_figures.Controls.Add(rad_section);
             group_figures.Controls.Add(rad_square);
             group_figures.Controls.Add(rad_triangle);
             group_figures.Controls.Add(rad_circle);
-            group_figures.Location = new Point(1089, 174);
+            group_figures.Location = new Point(1, 2);
             group_figures.Name = "group_figures";
-            group_figures.Size = new Size(160, 160);
+            group_figures.Size = new Size(160, 123);
             group_figures.TabIndex = 2;
             group_figures.TabStop = false;
             group_figures.Text = "Figures";
             // 
-            // rad_section
-            // 
-            rad_section.AutoSize = true;
-            rad_section.Location = new Point(20, 56);
-            rad_section.Name = "rad_section";
-            rad_section.Size = new Size(79, 24);
-            rad_section.TabIndex = 1;
-            rad_section.Text = "Section";
-            rad_section.UseVisualStyleBackColor = true;
-            // 
             // rad_square
             // 
             rad_square.AutoSize = true;
-            rad_square.Location = new Point(20, 116);
+            rad_square.Location = new Point(22, 86);
             rad_square.Name = "rad_square";
             rad_square.Size = new Size(76, 24);
             rad_square.TabIndex = 3;
@@ -94,7 +82,7 @@
             // rad_triangle
             // 
             rad_triangle.AutoSize = true;
-            rad_triangle.Location = new Point(20, 86);
+            rad_triangle.Location = new Point(22, 56);
             rad_triangle.Name = "rad_triangle";
             rad_triangle.Size = new Size(83, 24);
             rad_triangle.TabIndex = 2;
@@ -105,7 +93,7 @@
             // 
             rad_circle.AutoSize = true;
             rad_circle.Checked = true;
-            rad_circle.Location = new Point(20, 26);
+            rad_circle.Location = new Point(22, 26);
             rad_circle.Name = "rad_circle";
             rad_circle.Size = new Size(67, 24);
             rad_circle.TabIndex = 0;
@@ -139,7 +127,6 @@
         private CheckBox mark_more;
         private CheckBox ctrl_enabled;
         private GroupBox group_figures;
-        private RadioButton rad_section;
         private RadioButton rad_square;
         private RadioButton rad_triangle;
         private RadioButton rad_circle;

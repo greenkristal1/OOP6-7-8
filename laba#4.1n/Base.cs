@@ -10,6 +10,10 @@ namespace laba_4._1n
     {
 
         public string Name { get; init; }
+
+        protected int x;
+
+        protected int y;
         public void printName()
         {
             Console.WriteLine(Name);
@@ -36,11 +40,15 @@ namespace laba_4._1n
             if (marked == true) return true;
             else return false;
         }
+        public abstract void move(int x, int y, int width, int height);
+       
+        public abstract void changeSize(int num);
+
         public void setColor(Color color)
         {
             brush.Color = color;
         }
-
+        
         ~Base()
         {
 

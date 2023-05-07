@@ -8,22 +8,22 @@ namespace laba_4._1n
 {
     class Square : Base
     {
-        private int X { init; get; }
-        private int Y { init; get; }
+        private int len;
+       
 
         public Square(int x, int y) 
         { 
-            this.X = x;
-            this.Y = y;
-                
+            this.x = x;
+            this.y = y;
+            this.len = 50;
         
         }
 
         public override void draw(Graphics gr)
         {
-            gr.FillRectangle(GetBrush(), this.X - 25, this.Y - 25, 50, 50);
+            gr.FillRectangle(GetBrush(), this.x - 25, this.y - 25, len, len);
             if (marked == true)
-                 gr.DrawRectangle(Pens.Orange, this.X-25, this.Y - 25, 50, 50);
+                 gr.DrawRectangle(Pens.Orange, this.x-25, this.y - 25, len, len);
 
             
         }
@@ -31,8 +31,28 @@ namespace laba_4._1n
         //float x, float y, width, height
         public override bool touched(int x, int y)
         {
-            if (x >= this.X-25 && x <= this.X + 25 && y >= this.Y -25 && y <= this.Y + 25) return true;
+            if (x >= this.x-25 && x <= this.x + 25 && y >= this.y -25 && y <= this.y + 25) return true;
             else return false;
+        }
+        public override void move(int x, int y, int width, int height)
+        {
+            int chx = this.x + x;
+            int chy = this.y + y;
+            if (chx > 20 && chx < width - 80 && chy > 25 && chy < height - 100)
+            {
+                if (chx > 200 || chy > 200)
+                {
+                    this.x += x;
+                    this.y += y;
+                }
+            }
+        }
+        public override void changeSize(int num)
+        {
+            if (num == 1)
+                this.len += 10;
+            else if(num == -1)
+                this.len -= 10;
         }
     }
 }

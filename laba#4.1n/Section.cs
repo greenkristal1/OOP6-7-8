@@ -6,31 +6,30 @@ using System.Threading.Tasks;
 
 namespace laba_4._1n
 {
-    class Section : Base
+  /*  class Section : Base
     {
        
 
-        private int X { init; get; }
-
-        private int Y { init; get; }
+       
 
         public Section(int x, int y)
         {
-            this.X = x;
-            this.Y = y;
+            this.x = x;
+            this.x = y;
         }
 
         public override void draw(Graphics gr)
         {
             
-            if (marked == true)
-                gr.FillRectangle(Brushes.Orange, X-75, Y, 150, 1 );
-             gr.FillRectangle(GetBrush(), X-75, Y, 150, 1);//исправить здесь
+            *//*if (marked == true)*/
+               /* gr.FillRectangle(Brushes.Orange, this.x-75, this.y, 150, 1 );*/
+            /* gr.FillRectangle(GetBrush(), this.x-75, this.y, 150, 1);*//*//исправить здесь
+            gr.FillRectangle(GetBrush(), this.x, this.y, 150, 1);
 
         }
         public override bool touched(int x, int y)
         {
-            if (x >= this.X - 75 && x <= this.X + 75 && y >= this.Y - 10 && y <= this.Y + 10)
+            if (x >= this.x - 75 && x <= this.x + 75 && y >= this.y - 10 && y <= this.y + 10)
             {
                 return true;
                 
@@ -43,5 +42,5 @@ namespace laba_4._1n
         //float x, float y, width, height
 
 
-    }
+    }*/
 }
