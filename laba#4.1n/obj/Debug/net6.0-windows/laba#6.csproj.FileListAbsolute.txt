@@ -1,0 +1,17 @@
+D:\угату\2_курс\ооп\laba6\laba#4.1n\bin\Debug\net6.0-windows\laba#6.exe
+D:\угату\2_курс\ооп\laba6\laba#4.1n\bin\Debug\net6.0-windows\laba#6.deps.json
+D:\угату\2_курс\ооп\laba6\laba#4.1n\bin\Debug\net6.0-windows\laba#6.runtimeconfig.json
+D:\угату\2_курс\ооп\laba6\laba#4.1n\bin\Debug\net6.0-windows\laba#6.dll
+D:\угату\2_курс\ооп\laba6\laba#4.1n\bin\Debug\net6.0-windows\laba#6.pdb
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.csproj.AssemblyReference.cache
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba_4._1n.Form1.resources
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.csproj.GenerateResource.cache
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.GeneratedMSBuildEditorConfig.editorconfig
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.AssemblyInfoInputs.cache
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.AssemblyInfo.cs
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.csproj.CoreCompileInputs.cache
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.dll
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\refint\laba#6.dll
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.pdb
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\laba#6.genruntimeconfig.cache
+D:\угату\2_курс\ооп\laba6\laba#4.1n\obj\Debug\net6.0-windows\ref\laba#6.dll
