@@ -129,9 +129,63 @@ namespace laba_4._1n
             else return null;
 
         }
-    
+       public Base createShape(string figure)
+        {
+            Base shape;
+            switch (figure) 
+            {
+                case "Circle":
+                    shape = new CCircle(0, 0, 0);
+                    break;
+                case "Square":
+                    shape = new Square(0, 0);
+                    break;
+                case "Triangle":
+                    shape = new Triangle(0, 0);
+                    break;
+                case "Group":
+                    shape = new Group();
+                    break;
+                default:
+                    shape = null;
+                    break;
+            }
+            return shape;
 
+        }
+        public void saveShapes(StreamWriter wr)
+        {
+            wr.Write("The amount of figures is" + countRealObjects() + "\n"); 
+            for(int i = 0; i <  countRealObjects(); i++)
+            {
+                arr[i].save(wr);
+            }
 
-}
+            
+        }
+        public void loadShape(StreamReader rd)
+        {
+            int count = Int32.Parse(rd.ReadLine().Substring(24).Trim());
+            string figure;
+            
+            Base shape;
+
+            for(int i = 0; i < count; i++)
+            {
+                figure = rd.ReadLine();
+                shape = createShape(figure);
+                if(shape != null)
+                {
+                    shape.load(rd);
+                    setObject(shape);
+                }
+            }
+
+            
+            
+
+        }
+
+    }
 
 }

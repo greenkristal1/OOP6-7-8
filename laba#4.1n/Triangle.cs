@@ -96,13 +96,43 @@ namespace laba_4._1n
         }
         public override void save(StreamWriter st)
         {
-            st.Write("Square\n");
+            st.Write("Triangle\n");
             st.Write("The X is " + this.x + "\n");
             st.Write("The Y is " + this.y + "\n");
             st.Write("The Color is " + this.brush.Color + "\n");
+            
         }
         public override void load(StreamReader st)
         {
+            
+            int x_s = Int32.Parse(st.ReadLine().Substring(9).Trim()); ;
+            this.x = x_s;
+            int y_s = Int32.Parse(st.ReadLine().Substring(9).Trim()); ;
+            this.y = y_s;
+            string color_s = (st.ReadLine().Substring(13).Trim());
+            switch (color_s)
+            {
+                case "Blue]":
+                    brush.Color = Color.Blue;
+                    break;
+                case "Green]":
+                    brush.Color = Color.Green;
+                    break;
+                case "Pink]":
+                    brush.Color = Color.Pink;
+                    break;
+                case "Gold]":
+                    brush.Color = Color.Gold;
+                    break;
+
+
+            }
+
+            this.x = x_s;
+            this.y = y_s;
+            pts[0] = new PointF(x, y - radius);
+            pts[1] = new PointF(x - radius * MathF.Sqrt(3) / 2, y + radius / 2);
+            pts[2] = new PointF(x + radius * MathF.Sqrt(3) / 2, y + radius / 2);
 
         }
     }

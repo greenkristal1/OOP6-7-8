@@ -274,29 +274,13 @@ namespace laba_4._1n
                   fstream = new FileStream("../../../../.txt", FileMode.OpenOrCreate);
                    fstream?.Close();*/
                 StreamWriter wr = new StreamWriter("../../../../Figures.txt", false);
-                for (int i = 0; i < st.countRealObjects(); i++)
-                {
-                    if (st.getObject(i).is_marked())
-                    {
-                        st.getObject(i).save(wr);
-                    }
-
-
-                }
+                st.saveShapes(wr);
                 wr.Close();
             }
             if (e.KeyCode == Keys.L)
             {
                 StreamReader rd = new StreamReader("../../../../Figures.txt");
-                for (int i = 0; i < st.countRealObjects(); i++)
-                {
-                    if (st.getObject(i).is_marked())
-                    {
-                        st.getObject(i).load(rd);
-                    }
-
-
-                }
+                st.loadShape(rd);
                 rd.Close();
             }
                 this.Refresh();

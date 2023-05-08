@@ -87,15 +87,31 @@ namespace laba_4._1n
         }
         public override void load(StreamReader st)
         {
-            st.ReadLine(); //удалить эту строку когда начну заниматься фабричным методом
+            
             int len_s = Int32.Parse(st.ReadLine().Substring(9).Trim());
-            MessageBox.Show(len_s.ToString());
+            this.len = len_s;
             int x_s = Int32.Parse(st.ReadLine().Substring(9).Trim()); ;
-            MessageBox.Show(x_s.ToString());
+            this.x = x_s;
             int y_s = Int32.Parse(st.ReadLine().Substring(9).Trim()); ;
-            MessageBox.Show(y_s.ToString());
+            this.y = y_s;
             string color_s = (st.ReadLine().Substring(13).Trim());
-            MessageBox.Show(color_s); //Color [Gray]
+            switch (color_s)
+            {
+                case "Blue]":
+                    brush.Color = Color.Blue;
+                    break;
+                case "Green]":
+                    brush.Color = Color.Green;
+                    break;
+                case "Pink]":
+                    brush.Color = Color.Pink;
+                    break;
+                case "Gold]":
+                    brush.Color = Color.Gold;
+                    break;
+
+
+            }
         }
     }
 }
