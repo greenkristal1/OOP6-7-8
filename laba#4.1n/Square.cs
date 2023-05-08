@@ -11,7 +11,8 @@ namespace laba_4._1n
         private int len;
         private int x;
         private int y;
-
+        private SolidBrush brush = new SolidBrush(Color.Gray);
+        protected bool marked = false;
         public Square(int x, int y) 
         { 
             this.x = x;
@@ -20,6 +21,8 @@ namespace laba_4._1n
             this.Name = "Square";
         
         }
+        public override SolidBrush GetBrush()
+        { return brush; }
 
         public override void draw(Graphics gr)
         {
@@ -28,6 +31,23 @@ namespace laba_4._1n
                  gr.DrawRectangle(Pens.Orange, this.x-25, this.y - 25, len, len);
 
             
+        }
+        public override void mark()
+        {
+            marked = true;
+        }
+        public override void unmark()
+        {
+            marked = false;
+        }
+        public override bool is_marked()
+        {
+            if (marked == true) return true;
+            else return false;
+        }
+        public override void setColor(Color color)
+        {
+            brush.Color = color;
         }
 
         //float x, float y, width, height
@@ -55,6 +75,27 @@ namespace laba_4._1n
                 this.len += 10;
             else if(num == -1)
                 this.len -= 10;
+        }
+        public override void save(StreamWriter st)
+        {
+            st.Write("Square\n");
+            st.Write("Length = " + this.len.ToString() + "\n");
+            st.Write("The X is " + this.x + "\n");
+            st.Write("The Y is " + this.y + "\n");
+            st.Write("The Color is " + this.brush.Color + "\n");
+
+        }
+        public override void load(StreamReader st)
+        {
+            st.ReadLine(); //удалить эту строку когда начну заниматься фабричным методом
+            int len_s = Int32.Parse(st.ReadLine().Substring(9).Trim());
+            MessageBox.Show(len_s.ToString());
+            int x_s = Int32.Parse(st.ReadLine().Substring(9).Trim()); ;
+            MessageBox.Show(x_s.ToString());
+            int y_s = Int32.Parse(st.ReadLine().Substring(9).Trim()); ;
+            MessageBox.Show(y_s.ToString());
+            string color_s = (st.ReadLine().Substring(13).Trim());
+            MessageBox.Show(color_s); //Color [Gray]
         }
     }
 }

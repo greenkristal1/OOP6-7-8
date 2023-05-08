@@ -15,8 +15,8 @@ namespace laba_4._1n
         private float y;
 
         private PointF[] pts = new PointF[3];
-
-       
+        private SolidBrush brush = new SolidBrush(Color.Gray);
+        protected bool marked = false;
         public Triangle(int x, int y)
         {
             this.x = x;
@@ -27,7 +27,8 @@ namespace laba_4._1n
             pts[2] = new PointF(x + radius * MathF.Sqrt(3) / 2, y + radius / 2);
             this.Name = "Triangle";
         }
-        
+        public override SolidBrush GetBrush()
+        { return brush; }
         public override void draw(Graphics gr)
         {
             gr.FillPolygon(GetBrush(), pts);
@@ -35,6 +36,23 @@ namespace laba_4._1n
             if (marked == true)
                 gr.DrawPolygon(Pens.Orange, pts);
            
+        }
+        public override void mark()
+        {
+            marked = true;
+        }
+        public override void unmark()
+        {
+            marked = false;
+        }
+        public override bool is_marked()
+        {
+            if (marked == true) return true;
+            else return false;
+        }
+        public override void setColor(Color color)
+        {
+            brush.Color = color;
         }
         public override bool touched(int x, int y)
         {
@@ -75,6 +93,17 @@ namespace laba_4._1n
                 pts[2].X -= 10;
 
             }
+        }
+        public override void save(StreamWriter st)
+        {
+            st.Write("Square\n");
+            st.Write("The X is " + this.x + "\n");
+            st.Write("The Y is " + this.y + "\n");
+            st.Write("The Color is " + this.brush.Color + "\n");
+        }
+        public override void load(StreamReader st)
+        {
+
         }
     }
 }

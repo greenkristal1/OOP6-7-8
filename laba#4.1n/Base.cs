@@ -12,44 +12,34 @@ namespace laba_4._1n
 
         public string Name { get; init; }
 
-       /* protected int x;
-
-        protected int y;*/
-        public void printName()
+       
+    /*    public void printName()
         {
             Console.WriteLine(Name);
-        }
-        private SolidBrush brush = new SolidBrush(Color.Gray);
+        }*/
 
 
-        public SolidBrush GetBrush() { return brush; }
-        protected bool marked = false;
+
+        public abstract SolidBrush GetBrush(); 
+        
         public abstract void draw(Graphics g);
 
-        public void mark()
-        {
-            marked = true;
-        }
-        public  void unmark()
-        {
-            marked = false;
-        }
+        public abstract void mark();
+
+        public abstract void unmark();
+      
 
         public abstract bool touched(int x, int y);
-        public  bool is_marked()
-        {
-            if (marked == true) return true;
-            else return false;
-        }
+        public abstract bool is_marked();
+      
         public abstract void move(int x, int y, int width, int height);
        
         public abstract void changeSize(int num);
 
-        public void setColor(Color color)
-        {
-            brush.Color = color;
-        }
-        
+        public abstract void setColor(Color color);
+
+        public abstract void save(StreamWriter st);
+        public abstract void load(StreamReader st);
         ~Base()
         {
 

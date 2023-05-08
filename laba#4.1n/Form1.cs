@@ -85,7 +85,7 @@ namespace laba_4._1n
                 }
 
             }
-           
+            this.Refresh();
             if (is_touched) return;
             this.Paint -= Form2_Paint;
             this.Paint += Form1_Paint;
@@ -108,7 +108,8 @@ namespace laba_4._1n
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            
+           
+
 
             if (ctrl_enabled.Checked)
             {
@@ -227,7 +228,79 @@ namespace laba_4._1n
                     }
                 }
             }
-            this.Refresh();
+            if (e.KeyCode == Keys.G)
+            {
+                Group gr = new Group();
+                for (int i = 0; i < st.countRealObjects(); i++)
+                {
+                    if (st.getObject(i).is_marked())
+                    {
+                        gr.addShape(st.getObject(i));
+                    }
+
+
+                }
+                int del_count = 0;
+                int real_count = st.countRealObjects();
+                int item = 0;
+                while (item < st.countRealObjects())
+                {
+                    if (st.getObject(item).is_marked())
+                    {
+
+                        st.deleteObject(item);
+                        continue;
+                    }
+                    item++;
+                }
+
+                /*for (int i = 0; i < real_count; i++)
+                {
+                    if (st.getObject(i).is_marked())
+                    {
+                        st.deleteObject(i - del_count);
+                        del_count++;
+                        
+                    }
+
+
+                }*/
+
+                st.setObject(gr);
+            }
+            if(e.KeyCode == Keys.O)
+            {
+                /*FileStream? fstream = null;
+                  fstream = new FileStream("../../../../.txt", FileMode.OpenOrCreate);
+                   fstream?.Close();*/
+                StreamWriter wr = new StreamWriter("../../../../Figures.txt", false);
+                for (int i = 0; i < st.countRealObjects(); i++)
+                {
+                    if (st.getObject(i).is_marked())
+                    {
+                        st.getObject(i).save(wr);
+                    }
+
+
+                }
+                wr.Close();
+            }
+            if (e.KeyCode == Keys.L)
+            {
+                StreamReader rd = new StreamReader("../../../../Figures.txt");
+                for (int i = 0; i < st.countRealObjects(); i++)
+                {
+                    if (st.getObject(i).is_marked())
+                    {
+                        st.getObject(i).load(rd);
+                    }
+
+
+                }
+                rd.Close();
+            }
+                this.Refresh();
+            mark_more.Text = st.countRealObjects().ToString();
         }
 
 
