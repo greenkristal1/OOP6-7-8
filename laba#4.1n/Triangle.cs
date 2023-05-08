@@ -11,7 +11,9 @@ namespace laba_4._1n
     {
         
         private float radius;
-        
+        private float x;
+        private float y;
+
         private PointF[] pts = new PointF[3];
 
        
@@ -23,6 +25,7 @@ namespace laba_4._1n
             pts[0] = new PointF(x, y - radius);
             pts[1] = new PointF(x - radius * MathF.Sqrt(3) / 2, y + radius / 2);
             pts[2] = new PointF(x + radius * MathF.Sqrt(3) / 2, y + radius / 2);
+            this.Name = "Triangle";
         }
         
         public override void draw(Graphics gr)

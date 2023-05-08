@@ -85,7 +85,7 @@ namespace laba_4._1n
                 }
 
             }
-            this.Refresh();
+           
             if (is_touched) return;
             this.Paint -= Form2_Paint;
             this.Paint += Form1_Paint;
@@ -137,15 +137,13 @@ namespace laba_4._1n
                     }
                 }
 
-
+                
 
 
             }
             if (e.KeyCode == Keys.F1)
             {
 
-                /*if (color_count > colors.Length)
-                    color_count = 0;*/
                 for (int i = 0; i < st.countRealObjects(); i++)
                 {
                     if (st.getObject(i).is_marked())
@@ -153,7 +151,7 @@ namespace laba_4._1n
                         st.getObject(i).setColor(colors[color_count % 5]);
                     }
                 }
-                /* mark_more.Text = color_count.ToString();*/
+               
                 color_count++;
 
             }

@@ -13,10 +13,11 @@ namespace laba_4._1n
 
 
         private int Radius;
-        
-      
 
-       
+
+
+        private int x;
+        private int y;
         
 
         
@@ -25,6 +26,7 @@ namespace laba_4._1n
             this.x = x;
             this.y = y;
             this.Radius = 50;
+            this.Name = "Circle";
             
             
         }
@@ -34,7 +36,8 @@ namespace laba_4._1n
             this.x = x;
             this.y = y;
             this.Radius = r;
-           
+            this.Name = "Circle";
+
         }
 
 
@@ -59,7 +62,7 @@ namespace laba_4._1n
         {
             int chx = this.x + x;
             int chy = this.y + y;
-            if (chx > 20 && chx < width-80 && chy > 25 && chy < height-100) 
+            if (chx - Radius / 2 > 0 && chx + Radius / 2 < width && chy - Radius / 2 > 0 && chy + Radius / 2 < height) 
             { 
             if (chx > 200 || chy > 200)
             {

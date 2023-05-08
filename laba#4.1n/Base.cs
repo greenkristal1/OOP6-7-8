@@ -8,12 +8,13 @@ namespace laba_4._1n
 {
     abstract class Base
     {
+        
 
         public string Name { get; init; }
 
-        protected int x;
+       /* protected int x;
 
-        protected int y;
+        protected int y;*/
         public void printName()
         {
             Console.WriteLine(Name);

@@ -9,13 +9,15 @@ namespace laba_4._1n
     class Square : Base
     {
         private int len;
-       
+        private int x;
+        private int y;
 
         public Square(int x, int y) 
         { 
             this.x = x;
             this.y = y;
             this.len = 50;
+            this.Name = "Square";
         
         }
 
@@ -38,7 +40,7 @@ namespace laba_4._1n
         {
             int chx = this.x + x;
             int chy = this.y + y;
-            if (chx > 20 && chx < width - 80 && chy > 25 && chy < height - 100)
+            if (chx - 25 > 5 && chx + len < width - 5 && chy - 25 > 0 && chy + len < height )
             {
                 if (chx > 200 || chy > 200)
                 {
