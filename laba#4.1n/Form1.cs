@@ -108,7 +108,7 @@ namespace laba_4._1n
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-           
+
 
 
             if (ctrl_enabled.Checked)
@@ -138,7 +138,7 @@ namespace laba_4._1n
                     }
                 }
 
-                
+
 
 
             }
@@ -152,7 +152,7 @@ namespace laba_4._1n
                         st.getObject(i).setColor(colors[color_count % 5]);
                     }
                 }
-               
+
                 color_count++;
 
             }
@@ -268,7 +268,7 @@ namespace laba_4._1n
 
                 st.setObject(gr);
             }
-            if(e.KeyCode == Keys.O)
+            if (e.KeyCode == Keys.O)
             {
                 /*FileStream? fstream = null;
                   fstream = new FileStream("../../../../.txt", FileMode.OpenOrCreate);
@@ -283,7 +283,7 @@ namespace laba_4._1n
                 st.loadShape(rd);
                 rd.Close();
             }
-                this.Refresh();
+            this.Refresh();
             mark_more.Text = st.countRealObjects().ToString();
         }
 
