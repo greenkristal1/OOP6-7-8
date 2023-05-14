@@ -1,0 +1,43 @@
+The amount of figures is6
+Circle
+Radius = 50
+The X is 603
+The Y is 116
+The Color is Color [Gray]
+Circle
+Radius = 50
+The X is 1024
+The Y is 133
+The Color is Color [Gray]
+Circle
+Radius = 50
+The X is 988
+The Y is 313
+The Color is Color [Gray]
+Circle
+Radius = 50
+The X is 962
+The Y is 510
+The Color is Color [Gray]
+Circle
+Radius = 50
+The X is 457
+The Y is 205
+The Color is Color [Gray]
+Group
+The amount is 3
+Circle
+Radius = 70
+The X is 708
+The Y is 263
+The Color is Color [Gray]
+Circle
+Radius = 70
+The X is 681
+The Y is 418
+The Color is Color [Gray]
+Circle
+Radius = 70
+The X is 428
+The Y is 422
+The Color is Color [Gray]
