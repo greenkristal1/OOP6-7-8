@@ -28,21 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TreeNode treeNode1 = new TreeNode("Узел1");
-            TreeNode treeNode2 = new TreeNode("Узел2");
-            TreeNode treeNode3 = new TreeNode("Узел0", new TreeNode[] { treeNode1, treeNode2 });
-            TreeNode treeNode4 = new TreeNode("Узел4");
-            TreeNode treeNode5 = new TreeNode("Узел3", new TreeNode[] { treeNode4 });
-            TreeNode treeNode6 = new TreeNode("Узел5");
-            TreeNode treeNode7 = new TreeNode("Узел6");
-            TreeNode treeNode8 = new TreeNode("Узел8");
-            TreeNode treeNode9 = new TreeNode("Узел9");
-            TreeNode treeNode10 = new TreeNode("Узел14");
-            TreeNode treeNode11 = new TreeNode("круг", new TreeNode[] { treeNode10 });
-            TreeNode treeNode12 = new TreeNode("Узел10", new TreeNode[] { treeNode11 });
-            TreeNode treeNode13 = new TreeNode("Узел11");
-            TreeNode treeNode14 = new TreeNode("Узел7", new TreeNode[] { treeNode8, treeNode9, treeNode12, treeNode13 });
-            TreeNode treeNode15 = new TreeNode("Узел13");
             mark_more = new CheckBox();
             ctrl_enabled = new CheckBox();
             group_figures = new GroupBox();
@@ -119,41 +104,12 @@
             // 
             // treeView1
             // 
-            treeView1.Location = new Point(953, 173);
+            treeView1.Location = new Point(5, 182);
             treeView1.Name = "treeView1";
-            treeNode1.Name = "Узел1";
-            treeNode1.Text = "Узел1";
-            treeNode2.Name = "Узел2";
-            treeNode2.Text = "Узел2";
-            treeNode3.Name = "Узел0";
-            treeNode3.Text = "Узел0";
-            treeNode4.Name = "Узел4";
-            treeNode4.Text = "Узел4";
-            treeNode5.Name = "Узел3";
-            treeNode5.Text = "Узел3";
-            treeNode6.Name = "Узел5";
-            treeNode6.Text = "Узел5";
-            treeNode7.Name = "Узел6";
-            treeNode7.Text = "Узел6";
-            treeNode8.Name = "Узел8";
-            treeNode8.Text = "Узел8";
-            treeNode9.Name = "Узел9";
-            treeNode9.Text = "Узел9";
-            treeNode10.Name = "Узел14";
-            treeNode10.Text = "Узел14";
-            treeNode11.Name = "Узел12";
-            treeNode11.Text = "круг";
-            treeNode12.Name = "Узел10";
-            treeNode12.Text = "Узел10";
-            treeNode13.Name = "Узел11";
-            treeNode13.Text = "Узел11";
-            treeNode14.Name = "Узел7";
-            treeNode14.Text = "Узел7";
-            treeNode15.Name = "Узел13";
-            treeNode15.Text = "Узел13";
-            treeView1.Nodes.AddRange(new TreeNode[] { treeNode3, treeNode5, treeNode6, treeNode7, treeNode14, treeNode15 });
-            treeView1.Size = new Size(151, 121);
+            treeView1.Size = new Size(266, 223);
             treeView1.TabIndex = 3;
+            treeView1.AfterCheck += treeView1_AfterCheck;
+            treeView1.AfterSelect += treeView1_AfterSelect;
             // 
             // Form1
             // 

@@ -27,6 +27,14 @@ namespace laba_4._1n
             pts[2] = new PointF(x + radius * MathF.Sqrt(3) / 2, y + radius / 2);
             this.Name = "Triangle";
         }
+        public override int returnX()
+        {
+            return (int)pts[2].X;
+        }
+        public override int returnY()
+        {
+            return (int)pts[2].Y;
+        }
         public override SolidBrush GetBrush()
         { return brush; }
         public override void draw(Graphics gr)
@@ -135,5 +143,12 @@ namespace laba_4._1n
             pts[2] = new PointF(x + radius * MathF.Sqrt(3) / 2, y + radius / 2);
 
         }
+        public override void drawArr(Graphics g, int a_x, int a_y)
+        {
+            Pen p = new Pen(Brushes.GreenYellow, 4);
+            p.StartCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+            g.DrawLine(p, pts[2].X, pts[2].Y, a_x, a_y);
+        }
     }
+
 }

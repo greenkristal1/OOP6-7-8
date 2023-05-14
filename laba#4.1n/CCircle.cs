@@ -42,7 +42,14 @@ namespace laba_4._1n
         public override SolidBrush GetBrush()
         { return brush; }
 
-
+        public override int  returnX()
+        {
+            return this.x;
+        }
+        public override int returnY()
+        {
+            return this.y;
+        }
         public override void draw(Graphics gr)
         {
             
@@ -141,6 +148,14 @@ namespace laba_4._1n
             }
 
 
+        }
+        public override void drawArr(Graphics g, int a_x, int a_y)
+        {
+           /* MessageBox.Show("Hello");*/
+            Pen p = new Pen(Brushes.GreenYellow, 3);
+            p.StartCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+            g.DrawLine(p, this.x, this.y, a_x, a_y);
+            
         }
 
     }

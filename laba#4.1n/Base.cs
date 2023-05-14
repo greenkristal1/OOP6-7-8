@@ -8,15 +8,21 @@ namespace laba_4._1n
 {
     abstract class Base
     {
-        
 
+        private Observer obs = new Observer();
         public string Name { get; init; }
 
-       
-    /*    public void printName()
+        public abstract int returnX();
+        public abstract int returnY();
+        public string returnName()
         {
-            Console.WriteLine(Name);
-        }*/
+            return Name;
+            
+        }
+        public void onSubjectChanged(Graphics gr)
+        {
+            obs.notifyMarked(this, gr);
+        }
 
 
 
@@ -40,6 +46,8 @@ namespace laba_4._1n
 
         public abstract void save(StreamWriter st);
         public abstract void load(StreamReader st);
+
+        public abstract void drawArr(Graphics g, int a_x, int a_y);
         ~Base()
         {
 
